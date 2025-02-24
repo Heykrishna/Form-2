@@ -1,0 +1,73 @@
+.container {
+  max-width: 1000px; /* Increase the maximum width of the container */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the items horizontally */
+  text-align: center; /* Center the text inside the container */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%; /* Make form groups take full width */
+  text-align: center; /* Center form group labels and options */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.options {
+  display: flex;
+  justify-content: center; /* Center the options */
+  flex-wrap: wrap;
+}
+
+.capsule {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none; /* Remove the border */
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #dadada;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap; /* Prevent text from wrapping */
+  /* font-weight: normal;  */
+}
+
+.capsule:hover {
+  background-color: #e0e0e0; /* Change background color on hover */
+}
+
+.capsule.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.capsule input {
+  display: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+h1 {
+  text-align: center; /* Center the heading */
+}
