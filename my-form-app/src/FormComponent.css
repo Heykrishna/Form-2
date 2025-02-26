@@ -16,7 +16,7 @@
 .form-group {
   margin-bottom: 20px;
   width: 100%; /* Make form groups take full width */
-  text-align: center; /* Center form group labels and options */
+  text-align: center; 
   font-family: 'Roboto', sans-serif; /* Use Roboto font */
   font-weight: 300; /* Make the font thin */
 }
@@ -24,7 +24,13 @@
 .form-group label {
   display: block;
   margin-bottom: 10px;
-  font-weight: bold; /* Keep labels bold */
+  font-weight: 900;
+  text-align: left;
+  letter-spacing: 0.7px;
+}
+
+.large-label {
+  font-size: 18px; /* Increase the font size */
 }
 
 .options {
@@ -42,7 +48,7 @@
   border-radius: 20px;
   cursor: pointer;
   background-color: #dadada;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Add transform to transition */
   white-space: nowrap; /* Prevent text from wrapping */
   font-family: 'Roboto', sans-serif !important; /* Use Roboto font */
   font-weight: 300 !important; /* Make the font thin */
@@ -50,10 +56,11 @@
 
 .capsule:hover {
   background-color: #e0e0e0; /* Change background color on hover */
+  transform: scale(1.15); /* Scale up the element */
 }
 
 .capsule.selected {
-  background-color: #007bff;
+  background-color: #007bff; /* Change background color to blue */
   color: white;
   font-family: 'Roboto', sans-serif !important; /* Use Roboto font */
   font-weight: 300 !important; /* Make the font thin */
@@ -72,7 +79,8 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-family: 'Roboto', sans-serif; /* Use Roboto font */
-  font-weight: 300; /* Make the font thin */
+  font-weight: 700; /* Make the font bold */
+  letter-spacing: 0.5px;
 }
 
 button:hover {
@@ -82,5 +90,47 @@ button:hover {
 h1 {
   text-align: center; /* Center the heading */
   font-family: 'Roboto', sans-serif; /* Use Roboto font */
-  font-weight: 300; /* Make the font thin */
+  font-weight: 600; /* Make the font thick */
+  color: #0056b3;
+}
+
+/* Modal styles */
+.modal {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px; /* Limit the width */
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

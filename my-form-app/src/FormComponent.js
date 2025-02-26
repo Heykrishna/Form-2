@@ -20,6 +20,8 @@ const FormComponent = () => {
     depressionState: ''
   });
 
+  const [showModal, setShowModal] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -30,7 +32,17 @@ const FormComponent = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const allFieldsFilled = Object.values(formData).every(value => value !== '');
+    if (!allFieldsFilled) {
+      setShowModal(true);
+      return;
+    }
     console.log(formData);
+    // Add your form submission logic here
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   const options = [
@@ -70,7 +82,7 @@ const FormComponent = () => {
         {Object.keys(formData).map((key) => (
           key !== 'depressionState' && (
             <div key={key} className="form-group">
-              <label>{key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1')}</label>
+              <label className="large-label" htmlFor={key}>{key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1')}</label>
               <div className="options">
                 {renderOptions(key, options)}
               </div>
@@ -78,13 +90,21 @@ const FormComponent = () => {
           )
         ))}
         <div className="form-group">
-          <label>Depression State</label>
+          <label className="large-label" htmlFor="depressionState">Depression State</label>
           <div className="options">
             {renderOptions('depressionState', depressionStateOptions)}
           </div>
         </div>
         <button type="submit">Submit</button>
       </form>
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>&times;</span>
+            <p>Please select all options before submitting the form.</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
