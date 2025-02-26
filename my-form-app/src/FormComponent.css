@@ -9,24 +9,30 @@
   flex-direction: column;
   align-items: center; /* Center the items horizontally */
   text-align: center; /* Center the text inside the container */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-weight: 300; /* Make the font thin */
 }
 
 .form-group {
   margin-bottom: 20px;
   width: 100%; /* Make form groups take full width */
   text-align: center; /* Center form group labels and options */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-weight: 300; /* Make the font thin */
 }
 
 .form-group label {
   display: block;
   margin-bottom: 10px;
-  font-weight: bold;
+  font-weight: bold; /* Keep labels bold */
 }
 
 .options {
   display: flex;
   justify-content: center; /* Center the options */
   flex-wrap: wrap;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-weight: 300; /* Make the font thin */
 }
 
 .capsule {
@@ -38,7 +44,8 @@
   background-color: #dadada;
   transition: background-color 0.3s, color 0.3s;
   white-space: nowrap; /* Prevent text from wrapping */
-  /* font-weight: normal;  */
+  font-family: 'Roboto', sans-serif !important; /* Use Roboto font */
+  font-weight: 300 !important; /* Make the font thin */
 }
 
 .capsule:hover {
@@ -48,6 +55,8 @@
 .capsule.selected {
   background-color: #007bff;
   color: white;
+  font-family: 'Roboto', sans-serif !important; /* Use Roboto font */
+  font-weight: 300 !important; /* Make the font thin */
 }
 
 .capsule input {
@@ -62,6 +71,8 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-weight: 300; /* Make the font thin */
 }
 
 button:hover {
@@ -70,4 +81,6 @@ button:hover {
 
 h1 {
   text-align: center; /* Center the heading */
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-weight: 300; /* Make the font thin */
 }
